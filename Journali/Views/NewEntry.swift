@@ -29,6 +29,7 @@ struct NewEntrySheet: View {
         .alert("Discard Changes?", isPresented: $showDiscardAlert) {
             Button("Discard", role: .destructive) { onCancel() }
             Button("Keep Editing", role: .cancel) {}
+                .preferredColorScheme(.dark)
         }
     }
 
@@ -38,7 +39,8 @@ struct NewEntrySheet: View {
                 Image(systemName: "xmark")
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundStyle(.white)
-                    .frame(width: 36, height: 36)
+                    .frame(width: 44, height: 44)
+                    .glassEffect()
                     .background(Circle().fill(Color.white.opacity(0.2)))
             }
 
@@ -48,8 +50,9 @@ struct NewEntrySheet: View {
                 Image(systemName: "checkmark")
                     .font(.system(size: 16, weight: .semibold))
                     .foregroundStyle(.white)
-                    .frame(width: 36, height: 36)
-                    .background(Circle().fill(Color("Purple")))
+                    .frame(width: 44, height: 44)
+                    .glassEffect()
+                    .background(Circle().fill(Color("darkPurple")))
             }
         }
     }
@@ -64,7 +67,7 @@ struct NewEntrySheet: View {
                 }
                 TextField("", text: $title)
                     .foregroundStyle(.white)
-                    .font(.system(size: 22, weight: .semibold))
+                    .font(.system(size: 40, weight: .semibold))
             }
 
             Text(Date(), format: .dateTime.year().month().day())
@@ -82,7 +85,7 @@ struct NewEntrySheet: View {
                 TextEditor(text: $content)
                     .scrollContentBackground(.hidden)
                     .foregroundStyle(.white)
-                    .font(.system(size: 18))
+                    .font(.system(size: 20))
                     .frame(minHeight: 180)
                     .padding(.leading, -4)
             }

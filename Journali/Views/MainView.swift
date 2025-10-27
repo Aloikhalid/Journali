@@ -11,11 +11,8 @@ struct MainView: View {
 
     var body: some View {
         ZStack {
-            // Background
-            LinearGradient(colors: [Color(red: 0.08, green: 0.08, blue: 0.08), .black],
-                           startPoint: .top, endPoint: .bottom)
-                .ignoresSafeArea()
-
+         
+        
             VStack(alignment: .leading, spacing: 16) {
                 header
                 content
@@ -106,7 +103,7 @@ struct MainView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 22, height: 22)
-                            .padding(.vertical, 8)
+                       
                     }
                 }
                 .padding(.horizontal, 14)
@@ -114,9 +111,11 @@ struct MainView: View {
                 .background(Capsule().fill(Color.white.opacity(0.04)))
                 .overlay(Capsule().strokeBorder(Color.white.opacity(0.18)))
                 .shadow(color: .black.opacity(0.35), radius: 10, x: 0, y: 8)
+                .glassEffect()
                 .padding(.trailing, 16)
                 .padding(.top, 16)
-                .overlay(alignment: .topTrailing) {
+                
+                .overlay(alignment: .topTrailing){
                     if viewModel.isShowingFilterMenu {
                         FilterPanel(
                             currentMode: viewModel.sortMode,
@@ -160,10 +159,10 @@ struct MainView: View {
                 }
                 .padding(.horizontal, 16)
                 .frame(height: 56)
-                .background(RoundedRectangle(cornerRadius: 28).fill(Color.white.opacity(0.04)))
                 .overlay(RoundedRectangle(cornerRadius: 28).strokeBorder(.white.opacity(0.5)))
                 .shadow(color: .black.opacity(0.35), radius: 10, x: 0, y: 8)
                 .frame(maxWidth: .infinity)
+                .glassEffect()
             }
             .padding(.horizontal, 16)
             .padding(.bottom, 20)
@@ -174,4 +173,6 @@ struct MainView: View {
 
 #Preview {
     MainView()
+        .preferredColorScheme(.dark)
+        
 }
