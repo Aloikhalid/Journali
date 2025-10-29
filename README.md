@@ -3,6 +3,13 @@ Your personal digital diary. Easily write, organize, and reflect on your thought
 
 Journali is a clean, minimal journaling app that lets you quickly capture thoughts with a title and rich text content. Entries are timestamped, can be bookmarked for quick access, and support swipe-to-delete with a confirmation step. You can sort by bookmark priority or by most recent entry, and filter to view only your bookmarked journals.
 
+
+
+<img width="1080" height="1080" alt="image" src="https://github.com/user-attachments/assets/4d6f197e-30b9-4404-bfea-d5bc73965b0d" />
+
+
+
+
 💻 The app is built using the MVVM architecture:
 • Model: MainCardItem represents a single journal entry with id, date, content, and bookmark state.
 • ViewModel: JournalViewModel manages the list of entries, sorting/filtering logic, bookmarking, deletion, and persistence.
