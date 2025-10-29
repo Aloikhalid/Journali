@@ -1,5 +1,11 @@
-journali 
-Your personal digital diary. Easily write, organize, and reflect on your thoughts, experiences, and feelings in a private and secure space.
-![Uploading Journal Icon Copy-2.png…]()
-<img width="308" height="675" alt="Screenshot 1447-05-06 at 10 38 54 AM" src="https://github.com/user-attachments/assets/01821f82-65bf-442b-8c97-c469012dd9b3" />
-<img width="292" height="629" alt="Screenshot 1447-05-06 at 10 39 36 AM" src="https://github.com/user-attachments/assets/4ebefeee-4d1e-47d7-b494-9fecccd3d7bb" />
+🖋️ journali 
+Your personal digital diary. Easily write, organize, and reflect on your thoughts, experiences, and feelings in a private and secure space. 📓
+
+Journali is a clean, minimal journaling app that lets you quickly capture thoughts with a title and rich text content. Entries are timestamped, can be bookmarked for quick access, and support swipe-to-delete with a confirmation step. You can sort by bookmark priority or by most recent entry, and filter to view only your bookmarked journals.
+
+💻 The app is built using the MVVM architecture:
+• Model: MainCardItem represents a single journal entry with id, date, content, and bookmark state.
+• ViewModel: JournalViewModel manages the list of entries, sorting/filtering logic, bookmarking, deletion, and persistence.
+• Views: SwiftUI views like MainView, CardView, SwipeableCard, FilterPanel, NewEntrySheet, and SplashView present the UI and bind to the ViewModel.
+
+Data persistence stores your entries locally so they remain available across app launches, and the UI uses smooth animations, a custom toolbar, and a splash screen for a polished experience.
